@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(38, 43, 49);
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+   
+}
+#container-movie {
+    width: 350px;
+    color: white;
+}
+li{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul {
+    list-style-type:none;
+}
+input {
+    margin-top: 25px;
+    
+}
+input, button {
+    width: 50%;
+    height: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    cursor: pointer;
+    border-style: none;
+    
+}
+button {
+    margin-top: 35px;
+    color: white;
+    background-color: rgb(31, 81, 110);
+    
+}
+button:hover {
+    border-style: groove;
+    border-color: rgb(20, 102, 255);
+    font-size: xx-large;
+}
+
+
