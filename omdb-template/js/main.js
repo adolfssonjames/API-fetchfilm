@@ -42,7 +42,7 @@ buttonMovie.addEventListener('click', () => {
     .then((data) => {
         console.log(data);
         console.log(containerMovie);
-        containerMovie.innerHTML = data; //kanske inte behövs
+       
     
         
         containerMovie.innerHTML = `
