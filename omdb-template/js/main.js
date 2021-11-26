@@ -31,42 +31,41 @@ buttonMovie.addEventListener('click', () => {
 
 
     fetch ('http://www.omdbapi.com/?apikey=593712e3&t=' + inputMovie.value)
-    .then((response) => {
-        console.log(response);
-        console.log(response.ok);
+        .then((response) => {
+             console.log(response);
+             console.log(response.ok);
     
-        return response.json();
+            return response.json();
     
     })
     
-    .then((data) => {
-        console.log(data);
-        console.log(containerMovie);
+         .then((data) => {
+             console.log(data);
+            console.log(containerMovie);
        
     
         
-        containerMovie.innerHTML = `
-        <ul>
-        <li> <img src="${data.Poster}">
-        </li>
-        <li> Title - ${data.Title} </li> 
-        <li> Year - ${data.Year} </li> 
-        <li> Type - ${data.Type} </li>
-        <li> Genre - ${data.Genre} </li>
-        <li> Rating - ${data.imdbRating}</li> 
-        <li>  ${data.Plot} </li>
-        </ul>
-        `;  
+            containerMovie.innerHTML = `
+            <ul>
+            <li> <img src="${data.Poster}">
+            </li>
+            <li> Title - ${data.Title} </li> 
+            <li> Year - ${data.Year} </li> 
+            <li> Type - ${data.Type} </li>
+            <li> Genre - ${data.Genre} </li>
+            <li> Rating - ${data.imdbRating}</li> 
+            <li>  ${data.Plot} </li>
+            </ul>
+            `;  
+        
+    })
+    
+        .catch((error) => {
+            console.log(error)
+             errorMsg.innerHTML = "Error! Something went wrong.";
     
     })
     
-    .catch((error) => {
-        console.log(error)
-        errorMsg.innerHTML = "Error! Something went wrong.";
-    
-    })
-    
-    
-    
-    })
+   
+})
     
