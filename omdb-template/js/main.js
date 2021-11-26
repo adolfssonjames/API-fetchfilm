@@ -21,4 +21,47 @@
 * http://www.omdbapi.com/?apikey=[yourkey]&s=star trek&type=series
 *
 */
-let url = 'http://www.omdbapi.com/?apikey=[yourkey]=star trek';
+let inputMovie = document.getElementById('input-movie');
+let buttonMovie = document.getElementById('button-movie');
+let containerMovie = document.getElementById('container-movie');
+let errorMsg = document.createElement('p');
+
+buttonMovie.addEventListener('click', () => {
+
+
+
+    fetch ('http://www.omdbapi.com/?apikey=593712e3&t=' + inputMovie.value)
+    .then((response) => {
+        console.log(response);
+        console.log(response.ok);
+    
+        return response.json();
+    
+    })
+    
+    .then((data) => {
+        console.log(data);
+        console.log(containerMovie);
+        containerMovie.innerHTML = data; //kanske inte behövs
+    
+        
+        containerMovie.innerHTML = `
+        <ul>
+        <li> <img src="${data.Poster}">
+        </li>
+        <li> ${data.Title} </li> <li>${data.Year} </li>
+        </ul>
+        `;  
+    
+    })
+    
+    .catch((error) => {
+        console.log(error)
+        errorMsg.innerHTML = "Error! Something went wrong.";
+    
+    })
+    
+    
+    
+    })
+    
