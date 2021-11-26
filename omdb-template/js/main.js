@@ -49,7 +49,12 @@ buttonMovie.addEventListener('click', () => {
         <ul>
         <li> <img src="${data.Poster}">
         </li>
-        <li> ${data.Title} </li> <li>${data.Year} </li>
+        <li> Title - ${data.Title} </li> 
+        <li> Year - ${data.Year} </li> 
+        <li> Type - ${data.Type} </li>
+        <li> Genre - ${data.Genre} </li>
+        <li> Rating - ${data.imdbRating}</li> 
+        <li>  ${data.Plot} </li>
         </ul>
         `;  
     
